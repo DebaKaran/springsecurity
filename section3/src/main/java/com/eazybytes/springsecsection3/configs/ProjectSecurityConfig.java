@@ -37,13 +37,13 @@ public class ProjectSecurityConfig {
     public UserDetailsService userDetailsService() {
         UserDetails user =
                 User.withUsername("user")
-                        .password("1234")
+                        .password("{noop}1234")
                         .authorities("read")
                         .build();
 
         UserDetails admin =
                 User.withUsername("admin")
-                        .password("1234")
+                        .password("{noop}1234")
                         .authorities("admin")
                         .build();
 
